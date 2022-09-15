@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirTickets</title>
+    <title>AirTickets site</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -43,21 +43,20 @@
                 <p>Цена</p>
                 <label for="fromPrice">
                     <span>от</span>
-                </label>
-                <input type="text" id="fromPrice" name="fromPrice"><br>
+                    <input type="text" id="fromPrice" name="fromPrice" value="0"></label>
                 <label for="beforePrice">
                     <span>до</span>
-                </label>
-                <input type="text" id="beforePrice" name="beforePrice"><br>
+                    <input type="text" id="beforePrice" name="beforePrice" value="10000"></label>
             </div>
 
             <div class="airline">
                 <p>Авиакомпании</p>
-                <input type="checkbox" id="elemAirline" name="elemAirline" checked>
-                <label for="elemAirline"></label><br>
 
-                <input type="checkbox" id="elemAirline" name="elemAirline" checked>
-                <label for="elemAirline"></label><br>
+                <label for="elemAirline"><input type="checkbox" id="elemAirline" name="elemAirline"
+                        checked><span></span></label>
+
+                <label for="elemAirline"><input type="checkbox" id="elemAirline" name="elemAirline"
+                        checked><span></span></label>
 
             </div>
         </div>
@@ -65,20 +64,37 @@
 
     <div class="cards">
         <div class="card">
-            <div class="headerCard"></div>
-            <div class="orientationThere"></div>
+            <div class="headerCard">
+                <div class="head">
+                    <img src="#" alt="logo">
+                    <span>125</span>
+                </div>
+
+                <div class="link">
+                    <span>Стоимость для одного взрослого пассажира</span>
+                </div>
+            </div>
+
+
+            <div class="orientationThere">
+                <p><span>→</span><span></span></p>
+            </div>
+
             <div class="departureTimeThere">
+                <p><span></span><img width="30" height="30" src="images/time1.png" alt="images/time1.png"><span></span>
+                </p>
+            </div>
+            <div class="align"><span>1 пересадка</span></div>
+            <div class="nameAirlinThere">
                 <p>Рейс выполняет:</p>
             </div>
-            <p>1 пересадка</p>
-            <div class="nameAirlinThere"></div>
             <div class="orientationFromThere"></div>
             <div class="departureTimeFromThere"></div>
-            <p>1 пересадка</p>
+            <div class="align"><span>1 пересадка</span></div>
             <div class="nameAirlineFromThere">
                 <p>Рейс выполняет:</p>
             </div>
-            <button id="button">Выбрать</button>
+            <button id="button" class="action">Выбрать</button>
         </div>
     </div>
 </div>

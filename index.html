@@ -11,16 +11,16 @@
 </head>
 <div class="container">
     <div class="containerProperty">
-        <div class="property">
+        <form class="property">
             <div class="sort">
                 <p>Сортировать</p>
-                <label for="increasePrice"><input type="radio" id="increasePrice" class="real-radio-btn" name="option"
+                <label for="increasePrice"><input type="radio" id="increasePrice" class="real-radio-btn" name="sort"
                         value="increasePrice" checked><span class="custom-radio-btn">- по возрастанию
                         цены</span></label>
-                <label for="reductionPrice"><input type="radio" id="reductionPrice" class="real-radio-btn" name="option"
+                <label for="reductionPrice"><input type="radio" id="reductionPrice" class="real-radio-btn" name="sort"
                         value="reductionPrice" checked>
                     <span class="custom-radio-btn">- по убыванию цены</span></label>
-                <label for="travelTime"><input type="radio" id="travelTime" class="real-radio-btn" name="option"
+                <label for="travelTime"><input type="radio" id="travelTime" class="real-radio-btn" name="sort"
                         value="travelTime" checked>
                     <span class="custom-radio-btn">- по времени в пути</span>
                 </label><br>
@@ -29,12 +29,12 @@
             <div class="filter">
                 <p>Фильтровать</p>
 
-                <label for="oneTransfer"><input type="checkbox" id="oneTransfer" value="oneTransfer" checked><span> - 1
+                <label for="2"><input type="checkbox" id="2" name="transfer" value="2" checked><span> - 1
                         пересадка</span>
                 </label>
 
 
-                <label for="notTransfers"><input type="checkbox" id="notTransfers" value="notTransfers" checked><span> -
+                <label for="1"><input type="checkbox" id="1" name="transfer" value="1" checked><span> -
                         нет пересадок</span>
                 </label>
             </div>
@@ -45,20 +45,15 @@
                     <input type="text" id="fromPrice" name="fromPrice" value="0"></label>
                 <label for="beforePrice">
                     <span>до</span>
-                    <input type="text" id="beforePrice" name="beforePrice" value="10000"></label>
+                    <input type="text" id="beforePrice" name="beforePrice" value="100000"></label>
             </div>
 
             <div class="airline">
                 <p>Авиакомпании</p>
 
-                <label for="elemAirline"><input type="checkbox" id="elemAirline" name="elemAirline"
-                        checked><span></span></label>
-
-                <label for="elemAirline"><input type="checkbox" id="elemAirline" name="elemAirline"
-                        checked><span></span></label>
 
             </div>
-        </div>
+        </form>
     </div>
     <div>
         <div class="cards">

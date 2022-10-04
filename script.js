@@ -80,7 +80,6 @@ class Util {
     }
 }
 
-
 class Flight {
     data;
     total;
@@ -132,7 +131,6 @@ class Flight {
     </div>`
     }
 
-
     carrier;
     departureCity;
     departureAirports;
@@ -164,11 +162,6 @@ class Flight {
         this.data = data;
         this.departureCity = this.getProperty('departureCity', 'departure');
         this.departureAirports = this.getProperty('departureAirport', 'departure');
-        // this.operatingAirlines = this.trasfer.fromThere > 1 && data.legs[1].segments[1].operatingAirline
-        //     ? data.legs[1].segments[1].operatingAirline.caption
-        //     : this.carrier;
-        // this.operatingAirlines = data.legs[1].segments[1]?.operatingAirline?.caption || this.carrier
-        // console.log(this.operatingAirlines);
         this.airlineArrival = data.legs[1].segments[data.legs[1].segments.length - 1].airline.caption;
 
 
@@ -197,9 +190,7 @@ class Flight {
         this.weekDepartureFromThere = Util.getWeek(this.departureDates.fromThere);
 
         this.duration = new FromThere(Util.getTravelDuration(data.legs[0].duration), Util.getTravelDuration(data.legs[1].duration));
-        // console.log(this.duration);
         this.travelTime = data.legs[0].duration + data.legs[1].duration;
-        // console.log(this.travelTime);
 
         this.total = data.price.total.amount;
         this.carrier = data.carrier.caption;
@@ -255,9 +246,7 @@ init();
 
 
 function getFilterFlights(arr, filter) {
-    // console.log(filter.transfer);
-    // debugger
-    // render(arr.filter((e, i) => i < count))
+
     const result = arr.filter((el) => {
         return +el.total >= +filter.fromPrice
             && +el.total <= +filter.beforePrice
@@ -279,7 +268,6 @@ function getFilterFlights(arr, filter) {
     render(result)
 }
 
-
 FORM.addEventListener('input', getFilters);
 
 function getFilters() {
@@ -300,7 +288,6 @@ function render(arr) {
     });
 }
 
-// render(storeFlightsData.filter((e, i) => i < count))
 
 btnMore.addEventListener('click', () => {
     count += 2;

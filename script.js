@@ -1,8 +1,6 @@
 import data from './dataBase.json' assert {type: 'json'};
 const CARDS = document.querySelector('.cards');
-const btnAction = CARDS.querySelector('.btn-action');
 const btnMore = document.querySelector('.btn-more');
-const radios = document.querySelectorAll('.real-radio-btn');
 const sort = document.querySelector('.sort')
 const COMPANYS = new Set();
 const TOTALS = new Set();
@@ -11,7 +9,8 @@ let count = 2;
 const storeFlightsData = [];
 const FORM = document.querySelector('form');
 const airlineDiv = FORM.querySelector('.airline');
-console.log(airlineDiv);
+
+
 /**
  * @type {sort:string}
  * @param filter.sort - по возрастания,убыванию и время
@@ -220,7 +219,6 @@ function init() {
         COMPANYS.add(flightsData[key].flight.carrier.caption)
         TOTALS.add(flightsData[key].flight.price.total.amount)
     }
-    console.log(storeFlightsData);
 
     COMPANYS.forEach((el, i) => {
         airlineDiv.innerHTML += `<label for="${el}"><input id="${el}" type="checkbox" name="carrier"
@@ -280,8 +278,6 @@ function getFilters() {
 }
 
 function render(arr) {
-
-    console.log(arr);
     CARDS.innerHTML = '';
     arr.forEach(element => {
         CARDS.innerHTML += element.template;

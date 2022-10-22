@@ -343,42 +343,6 @@ span {
     justify-content: center;
 }
 
-/* @media (min-width: 641px) and (max-width: 1199px)
-.body {
-    max-width: 1199px;
-    min-width: 641px;
-} */
-
-/* @media (min-width: 641px) and (max-width: 1199px)
-.header {
-    max-width: 1199px;
-    min-width: 641px;
-    padding-top: 50px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    background-image: url(../images/banner-bg-tablet.jpg);
-} */
-
-/* @media (min-width: 641px) and (max-width: 1199px)
-.trend {
-    width: 100%;
-    max-width: 1199px;
-    margin-bottom: 40px;
-} */
-
-/* @media (min-width: 641px) and (max-width: 1199px)
-.blog {
-    max-width: 1199px;
-    min-width: 641px;
-    margin-bottom: 50px;
-    padding-left: 35px;
-    padding-right: 35px;
-} */
-/* @media (min-width: 641px) and (max-width: 1199px)
-.shop-item {
-    width: calc(292/658*100%);
-    margin-bottom: calc(5% + 20px);
-} */
 .burger{
     display: none;
 }
@@ -525,8 +489,6 @@ span {
     position: fixed;
     padding-left: 10px;
     z-index: 1;
-    /* width: 67%;
-    left: 9px; */
     margin-top: 22px;
     }
 

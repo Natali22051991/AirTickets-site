@@ -5,6 +5,7 @@
 
 }
 
+
 .d-none {
     display: none;
 }
@@ -13,14 +14,15 @@
     display: flex;
     align-content: center;
     justify-content: center;
-
+    width: 100%;
     max-width: 1400px;
-    gap: 20px;
+    gap: 1%;
 }
+
 
 .containerProperty {
     display: flex;
-    max-width: 100%;
+    width: 25%; 
 
 }
 
@@ -28,8 +30,8 @@
     display: flex;
     align-content: center;
     flex-direction: column;
-    gap: 20px;
-    margin: 38px 0 407px;
+    gap: 1%;
+    margin-top: 18%;
     background-color: rgb(255, 255, 255);
 
 }
@@ -49,7 +51,7 @@ span {
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    padding-top: 20px;
+
 }
 
 /*************************************radio inputSort*************************************/
@@ -147,6 +149,8 @@ span {
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    padding-top: 13%;
+
 }
 
 .airline {
@@ -155,6 +159,7 @@ span {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    padding-top: 13%;
     width: 100%;
 }
 
@@ -196,11 +201,14 @@ span {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
     background-size: 8px;
 }
-
+.main{
+    max-width: 100%;
+    
+}
 .cards {
     display: flex;
     max-width: 100%;
-    min-width: 650px;
+  
     justify-content: center;
     align-content: center;
     padding-top: 20px;
@@ -310,13 +318,22 @@ span {
     text-align: center;
     color: aliceblue;
 }
-
+.button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
 .btn-more {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 50px;
     margin: 0 auto;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .align {
@@ -326,34 +343,191 @@ span {
     justify-content: center;
 }
 
-/*
-.align span {
-    display: flex;
-    vertical-align: middle;
+/* @media (min-width: 641px) and (max-width: 1199px)
+.body {
+    max-width: 1199px;
+    min-width: 641px;
+} */
 
-}
+/* @media (min-width: 641px) and (max-width: 1199px)
+.header {
+    max-width: 1199px;
+    min-width: 641px;
+    padding-top: 50px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background-image: url(../images/banner-bg-tablet.jpg);
+} */
 
-.align:before,
-.align:after {
-    content: '';
-    display: flex;
-    vertical-align: middle;
+/* @media (min-width: 641px) and (max-width: 1199px)
+.trend {
     width: 100%;
-    height: 2px;
-    background-color: #adb5bd;
-    position: relative;
+    max-width: 1199px;
+    margin-bottom: 40px;
+} */
+
+/* @media (min-width: 641px) and (max-width: 1199px)
+.blog {
+    max-width: 1199px;
+    min-width: 641px;
+    margin-bottom: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+} */
+/* @media (min-width: 641px) and (max-width: 1199px)
+.shop-item {
+    width: calc(292/658*100%);
+    margin-bottom: calc(5% + 20px);
+} */
+.burger{
+    display: none;
+}
+@media (min-width: 761px) and (max-width: 1199px){
+    .container {
+        max-width: 1199px;
+        min-width: 761px;
+        padding: 10px;
+        gap: 2%;
+    }
+    .containerProperty {
+        width: 28%; 
+        min-width: 25%;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+       
+        
+      
+      
+    } 
+    .cards{
+        width: 100%;
+        max-width: fit-content;
+    }
+    .btn-more{
+        flex-shrink: 0;
+        flex-grow: 0;
+        max-width: fit-content;
+       min-width: fit-content;
+    }
 }
 
-.align:before {
-    margin-left: 100%;
-    left: -14px;
+
+@media (min-width: 320px) and (max-width: 760px){
+    .burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+
+    }
+    .burger span{
+
+        position: absolute;
+      background-color: #8aabcc;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+      transition: all 0.3s ease 0s;
+
+
+    }
+    .burger::before,
+    .burger::after{
+        content: '';
+        background-color: #8aabcc;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        z-index: 2;
+        transition: all 0.3s ease 0s;
+    }
+    .burger::after{
+        bottom: 0;
+    }
+    .burger::before{
+        top: 0;
+    }
+    .burger.active::before{
+        transform:rotate(45deg);
+        top: 9px;
+    }
+    .burger.active::after{
+        transform:rotate(-45deg);
+        bottom: 9px;
+            }
+    .burger.active span{
+        transform: scale(0);
+    }
+    .container {
+        max-width: 760px;
+        min-width: 320px;
+        margin: 0 auto;
+        flex-direction: column;
+      
+    }
+    .containerProperty {
+        
+        width: 100%;
+        align-content: center;
+        padding-top: 10px;
+        position: fixed;
+        z-index: 50;
+        left: 0;
+        top: 0px;
+        background-color: white;
+        padding: 6px;
+    }
+    
+    .main{ 
+        margin: 0px 10px;
+        max-width: 100%;
+        top: 16px;
+        position: relative;
+    } 
+   .orientationThere p{
+    font-size: 13px;
+   }
+   .orientationFromThere{
+    font-size: 13px;
+   }
+   .departureTimeThere p img{
+    width: 25px;
+    height: 25px;
+   }
+   .departureTimeThere p{
+    font-size: 13px;
+    }
+
+    .departureTimeFromThere p img{
+    width: 25px;
+    height: 25px;
+    }
+    .departureTimeFromThere p {
+    font-size: 13px;
+    }
+    .cards{
+        width: 100%; 
+    }
+    .card{
+        width: 100%;
+    }
+    .property{
+    display: none;
+    }
+    .property.active{
+    display: flex;
+    position: fixed;
+    padding-left: 10px;
+    z-index: 1;
+    /* width: 67%;
+    left: 9px; */
+    margin-top: 22px;
+    }
 
 }
-
-.align:after {
-    margin-right: -100%;
-    right: -14px;
-
-}
-
-*/

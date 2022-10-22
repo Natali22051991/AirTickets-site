@@ -288,5 +288,15 @@ function render(arr) {
 btnMore.addEventListener('click', () => {
     count += 2;
     getFilters()
+    const scrollingElement = (document.scrollingElement || document.body);
+    scrollingElement.scrollTop = scrollingElement.scrollHeight;
 
 });
+
+const burger = document.querySelector('.burger')
+const proparty = document.querySelector('.property')
+burger.addEventListener('click',event=>{
+   burger.classList.toggle('active')
+  proparty.classList.toggle('active')
+
+})

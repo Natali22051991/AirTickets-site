@@ -288,8 +288,8 @@ function render(arr) {
 btnMore.addEventListener('click', () => {
     count += 2;
     getFilters()
-    const scrollingElement = (document.scrollingElement || document.body);
-    scrollingElement.scrollTop = scrollingElement.scrollHeight;
+    // const scrollingElement = (document.scrollingElement || document.body);
+    // scrollingElement.scrollTop = scrollingElement.scrollHeight;
 
 });
 
@@ -300,3 +300,7 @@ burger.addEventListener('click',event=>{
   proparty.classList.toggle('active')
 
 })
+
+proparty.addEventListener('scroll', function() {
+    document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+  });

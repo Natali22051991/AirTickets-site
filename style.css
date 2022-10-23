@@ -17,6 +17,7 @@
     width: 100%;
     max-width: 1400px;
     gap: 1%;
+    height: 100%;
 }
 
 
@@ -446,6 +447,7 @@ span {
         top: 0px;
         background-color: white;
         padding: 6px;
+       
     }
     
     .main{ 
@@ -490,6 +492,8 @@ span {
     padding-left: 10px;
     z-index: 1;
     margin-top: 22px;
+    overflow: scroll;
+    height: 600px;
     }
 
 }
